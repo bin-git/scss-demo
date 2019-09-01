@@ -1,0 +1,60 @@
+@import "commo";
+
+.login {
+  background: #ffffff;
+  width: 500px;
+  height: 300px;
+  border-radius: 8px;
+  padding: 30px 40px;
+
+  h1 {
+    color: $zhu-color;
+    margin-bottom: 18px;
+  }
+  form input {
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    padding: 0 20px;
+    line-height: 2;
+    &:not(:last-child):focus {
+      border-color: $zhu-color;
+    }
+    &:last-child {
+      background: $zhu-color;
+      border: none;
+      color: #ffffff;
+      transition: all 0.2s;
+      &:hover {
+        background: $hover-color;
+        cursor: pointer;
+      }
+    }
+  }
+  @mixin hover-color($col1,$col-h){
+    color:$col1;
+    &:hover{
+      color:$col-h;
+      border-bottom: 1px $zhu-color solid;
+    }
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px + 10px;
+    font-weight: 200+(400-200);
+
+    a {
+      font-size: 12px;
+      text-decoration: none;
+      border-bottom:  1px solid transparent;
+      padding-bottom: 2px;
+      transition: all .3s;
+      @include hover-color($fu-color,$zhu-color)
+    }
+  }
+  /*login end*/
+}
+
+
