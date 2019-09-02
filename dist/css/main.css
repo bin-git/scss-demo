@@ -13,14 +13,14 @@ ol {
   list-style: none;
 }
 
-body {
+.login {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background: url(../images/bg.jpg) no-repeat center/cover;
 }
-body:after {
+.login:after {
   content: "";
   position: absolute;
   left: 0;
@@ -30,8 +30,7 @@ body:after {
   z-index: -1;
   opacity: 0.3;
 }
-
-.login {
+.login .box {
   background: #ffffff;
   width: 500px;
   height: 300px;
@@ -39,11 +38,11 @@ body:after {
   padding: 30px 40px;
   /*login end*/
 }
-.login h1 {
+.login .box h1 {
   color: #FF9E00;
   margin-bottom: 18px;
 }
-.login form input {
+.login .box form input {
   display: block;
   width: 100%;
   border: 1px solid #ccc;
@@ -51,26 +50,26 @@ body:after {
   padding: 0 20px;
   line-height: 2;
 }
-.login form input:not(:last-child):focus {
+.login .box form input:not(:last-child):focus {
   border-color: #FF9E00;
 }
-.login form input:last-child {
+.login .box form input:last-child {
   background: #FF9E00;
   border: none;
   color: #ffffff;
   transition: all 0.2s;
 }
-.login form input:last-child:hover {
+.login .box form input:last-child:hover {
   background: #FF5F00;
   cursor: pointer;
 }
-.login ul {
+.login .box ul {
   display: flex;
   justify-content: space-between;
   font-size: 20px;
   font-weight: 400;
 }
-.login ul a {
+.login .box ul a {
   font-size: 12px;
   text-decoration: none;
   border-bottom: 1px solid transparent;
@@ -78,9 +77,13 @@ body:after {
   transition: all 0.3s;
   color: #666;
 }
-.login ul a:hover {
+.login .box ul a:hover {
   color: #FF9E00;
   border-bottom: 1px #FF9E00 solid;
+}
+
+.ncontanner h1 {
+  font-size: 36px;
 }
 
 /*# sourceMappingURL=main.css.map */
